@@ -1,3 +1,5 @@
+<%= javascript_pack_tag 'application' %>
+
 <%= form_tag({ action: 'update', id: @article.id }, { method: :put, multipart: true, id: 'article_form', class: 'autosave' }) do %>
   <%= render 'form' %>
 <% end %>

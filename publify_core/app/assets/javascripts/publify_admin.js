@@ -21,7 +21,6 @@
 //= require jquery-ui/i18n/datepicker-zh-TW
 //= require datetimepicker
 //= require bootstrap-sprockets
-//= require quicktags
 //= require tagmanager
 //= require typeahead
 //= require sidebar

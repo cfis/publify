@@ -32,18 +32,13 @@
   </div>
 
   <div class='row'>
-    <div class='col-md-2' id='quicktags-block'>
-      <div id='quicktags' class='pull-right'>
-        <script type="text/javascript">edToolbar('page_body', '<%= @page.text_filter.name %>');</script>
-      </div>
-    </div>
-
-    <div class='col-md-8'>
+    <div class="col-md-8 col-md-offset-1">
       <%= text_field 'page', 'title', class: 'form-control', placeholder: t('.title') %>
-
-      <div id='editor'>
-        <%= text_area('page', 'body', class: 'form-control ', style: 'height: 360px', rows: '20', placeholder: t('.type_your_post')) %>
-      </div>
+      <%= hidden_field :page, :body, id: :body, data: { behavior: "trix-editor" } %>
+      <trix-editor
+        input="body"
+        class="trix-content">
+      </trix-editor>
     </div>
   </div>
 

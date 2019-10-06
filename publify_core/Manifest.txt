@@ -44,7 +44,6 @@ app/assets/javascripts/lightbox.js
 app/assets/javascripts/observe.js
 app/assets/javascripts/publify.js
 app/assets/javascripts/publify_admin.js
-app/assets/javascripts/quicktags.js
 app/assets/javascripts/set-timeago-lang.js
 app/assets/javascripts/sidebar.js
 app/assets/javascripts/spinnable.js

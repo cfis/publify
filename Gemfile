@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 6.0.0"
 
-gem "mysql2"
+#gem "mysql2"
 gem "pg"
 gem "sqlite3", "~> 1.4.0"
 
@@ -20,6 +20,8 @@ gem "publify_textfilter_code", path: "publify_textfilter_code"
 
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier", ">= 1.3.0"
+
+gem 'webpacker', "~> 4.0.0"
 
 # Needed for the lightbox and flickr text filters
 gem "flickraw", "~> 0.9.8", require: false
@@ -38,6 +40,11 @@ group :development, :test do
   gem "pry-rails", "~> 0.3.4"
   gem "rspec-rails", "~> 4.0.0.beta2"
   gem "simplecov", "~> 0.17.0", require: false
+end
+
+platforms :x64_mingw do
+  gem 'tzinfo-data', '=1.2019.3'
+  gem 'rb-readline', '=0.5.5'
 end
 
 group :development do

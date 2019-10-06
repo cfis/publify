@@ -23,16 +23,13 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-md-2" id="quicktags-block">
-    <div id="quicktags" class="pull-right">
-      <script type="text/javascript">edToolbar('article_body_and_extended', '<%= @article.text_filter.name %>');</script>
-    </div>
-  </div>
-  <div class="col-md-8">
+  <div class="col-md-8 col-md-offset-1">
     <%= text_field 'article', 'title', class: 'form-control', placeholder: t('.title') %>
-    <div id="editor">
-      <%= text_area('article', 'body_and_extended', class: 'form-control ', style: 'height: 360px', placeholder: t('.type_your_post')) %>
-    </div>
+    <%= hidden_field :article, :body, id: :body, data: { behavior: "trix-editor" } %>
+    <trix-editor
+      input="body"
+      class="trix-content">
+    </trix-editor>
   </div>
 </div>
 <div class="modal fade" id="publishOptions" tabindex="-1" role="dialog" aria-labelledby="publishOptions" aria-hidden="true">
